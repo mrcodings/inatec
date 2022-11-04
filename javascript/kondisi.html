@@ -3,4 +3,30 @@
 <script type="text/javascript">
     var benar = true;
     var salah = false;
+    if(benar && benar){
+        $("#target").append("<p>benar dan benar == Benar</p>");
+    }else{
+        
+    }
+    if(!(benar && salah)){
+        $("#target").append("<p>benar dan salah == Salah</p>");
+    }
+    if(!(salah && benar)){
+        $("#target").append("<p>salah dan benar == Salah</p>");
+    }
+    if(!(salah && salah)){
+        $("#target").append("<p>salah dan salah == Salah</p>");
+    }
+    if(benar || benar){
+        $("#target").append("<p>benar atau salah == Benar</p>");
+    }
+    if(salah || benar){
+        $("#target").append("<p>salah atau salah == Benar</p>");
+    }
+    if(benar || salah){
+        $("#target").append("<p>benar atau salah == Benar</p>");
+    }
+    if(!(salah || salah)){
+        $("#target").append("<p>benar atau salah == Salah</p>");
+    }
 </script>
