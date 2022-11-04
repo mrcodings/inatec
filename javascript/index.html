@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Belajar Javascript</title>
+    <script type="text/javascript" src="jquery-3.6.1.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("#submit").on('click', function(){
+        });
+        $(document).on("click", "#sumit", function(){
+        });
+        $("#submit").click(function(){
+          var html = "";
+          var fn = $("#fn");
+          var ln = $("#ln");
+          var kelas = $("#kelas option:selected");
+          html += "Nama: "+ fn.val() + " " + ln.val() + "<br />";
+          html += "Kelas: "+ kelas.text() + "<br />";
+          $("#target input").each(function(){
+              html += "Eskul: "+ $(this).val() + "<br />";
+		   });
+          $("#target_result").html(html);
+        });
+        var count = 1;
+        $("#tambah").click(function(){
+            $("#target").append('Nama Ekskul: <input type="text" id="ekskul_'+count+'"><br />');
+            count++;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    First Name: <input type="text" id="fn" value="Arief" /><br />
+    Last Name: <input type="text" id="ln" value="Siswanto" /><br />
+    Kelas:
+    <select id="kelas">
+      <option value="1">RPL</option>
+      <option value="2">MM</option>
+      <option value="3">OTKP</option></select>
+    <br />
+    <p>Ekskul <input type="button" value="Tambah" id="tambah"></p>
+    <div id="target"></div>
+	<input type="submit" id="submit" value="Kirim" />
+    <div id="target_result"></div>
+  </body>
+</html>

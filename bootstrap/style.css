@@ -1,0 +1,9 @@
+.panel-danger {
+    border-color: #d71535
+}
+
+.panel-danger>.panel-heading {
+    color: #ffffff;
+    background-color: #d71535;
+    border-color: #d71535;
+}

@@ -1,0 +1,33 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$.ajax({
+		url: "json.txt",
+		context: document.body
+	}).done(function(data) {
+		var json = JSON.parse(data);
+		console.log(json);
+		for(index in json){
+			$("#target").append("<li>" + json[index].nama + "</li>")
+		}
+	});
+});
+</script>
+<ol id="target"></ol>
+
+
+

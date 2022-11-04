@@ -1,0 +1,14 @@
+[
+  {
+    "nama": "RPL"
+  },
+  {
+    "nama": "MM"
+  },
+  {
+    "nama": "OTKP"
+  },
+  {
+    "nama": "AKL"
+  }
+]
